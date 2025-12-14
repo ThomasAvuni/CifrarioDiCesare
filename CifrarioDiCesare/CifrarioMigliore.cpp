@@ -1,14 +1,15 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include<string>
+#include <string>
+
+static std::vector<std::string> alfabeto = {"A", "B", "C", "D", "E", "F", "G", "H",
+    "I", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
+    "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+static const int key = 3;
 
 std::string Cifra(std::string stringa)
 {
-    std::vector<std::string> alfabeto = {"A", "B", "C", "D", "E", "F", "G", "H",
-        "I", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-        "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    const int key = 3;
     std::vector<std::string> result;
     std::transform(stringa.begin(), stringa.end(), stringa.begin(), toupper);
     
@@ -34,10 +35,6 @@ std::string Cifra(std::string stringa)
 
 std::string Decripta(std::string stringa)
 {
-    std::vector<std::string> alfabeto = {"A", "B", "C", "D", "E", "F", "G", "H",
-        "I", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-        "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    const int key = 3;
     std::vector<std::string> result;
     std::transform(stringa.begin(), stringa.end(), stringa.begin(), toupper);
     
@@ -90,6 +87,5 @@ int main(int argc, char* argv[])
         std::cout<<"Operazione non valida";
         break;
     }
-
     return 0;
 }
